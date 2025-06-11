@@ -432,3 +432,29 @@ section h2 {
   text-align: center;
   color: #444;
 }
+
+#footer {
+  background: linear-gradient(to right, #ff9a9e, #fad0c4);
+  padding: 40px 20px;
+  text-align: center;
+  color: #2c2c2c;
+  font-family: 'Courier New', monospace;
+  position: relative;
+  z-index: 2;
+}
+
+.age-counter h3 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+#live-age {
+  font-size: 1.4rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  background: #fff3;
+  padding: 10px 20px;
+  display: inline-block;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
