@@ -139,6 +139,13 @@
       <!-- Add more cards below similarly -->
     </div>
   </section>
+
+  <footer id="footer">
+    <div class="age-counter">
+      <h3>Your Age So Far:</h3>
+      <div id="live-age"></div>
+    </div>
+  </footer>
   
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   
@@ -260,6 +267,34 @@
         feedback.innerText = "Oops! That's not the one.";
       }
     }
+  </script>
+
+  <script>
+    function updateAgeCounter() {
+      const birthDate = new Date(1980, 5, 21, 0, 0); // June = 5 (0-indexed), 21st June 1980, 00:00
+      const now = new Date();
+
+      const diff = now - birthDate;
+      const totalSeconds = Math.floor(diff / 1000);
+
+      const years = Math.floor(totalSeconds / (365.25 * 24 * 60 * 60));
+      let remainingSeconds = totalSeconds - years * 365.25 * 24 * 60 * 60;
+
+      const days = Math.floor(remainingSeconds / (24 * 60 * 60));
+      remainingSeconds -= days * 24 * 60 * 60;
+  
+      const hours = Math.floor(remainingSeconds / (60 * 60));
+      remainingSeconds -= hours * 60 * 60;
+
+      const minutes = Math.floor(remainingSeconds / 60);
+      const seconds = Math.floor(remainingSeconds % 60);
+
+      document.getElementById("live-age").textContent =
+        `${years} years • ${days} days • ${hours} hrs • ${minutes} mins • ${seconds} secs`;
+    }
+
+    updateAgeCounter();
+    setInterval(updateAgeCounter, 1000);
   </script>
   
 </body>
