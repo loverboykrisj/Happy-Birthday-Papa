@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- DYNAMIC AGE COUNTER ---
-    const birthDate = new Date('1980-06-21T00:00:00');
+    const birthDate = new Date('1980-07-21T00:00:00');
     const yearsSpan = document.getElementById('years');
     const daysSpan = document.getElementById('days');
     const hoursSpan = document.getElementById('hours');
