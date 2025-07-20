@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, Dad!</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="particle-canvas"></canvas>
+
+    <main>
+        <section id="about" class="container">
+            <img src="images/dad-profile.jpg" alt="Dad's Portrait" class="profile-pic" data-aos="zoom-in">
+            <h1 data-aos="fade-up">Happy Birthday to the Coolest Dad!</h1>
+            <p data-aos="fade-up" data-aos-delay="200">
+                To the man who taught me how to ride a bike, fix just about anything, and laugh at the silliest jokes. This is a small celebration of you and the incredible person you are. Let's take a walk down memory lane!
+            </p>
+        </section>
+
+        <section id="letter" class="container">
+            <h2 data-aos="fade-up">A Letter For You</h2>
+            <div class="envelope-wrapper" data-aos="flip-up" data-aos-delay="200">
+                <div class="envelope">
+                    <div class="envelope-flap"></div>
+                    <div class="envelope-back"></div>
+                    <div class="letter-card">
+                        <h3>Dear Dad,</h3>
+                        <p>Words can't fully express how much you mean to me. Through every high and low, you've been my rock and my biggest cheerleader. Thank you for your endless wisdom, your terrible-but-amazing puns, and your unconditional love. Wishing you the happiest of birthdays and a year filled with joy.</p>
+                        <p>With all my love,<br> [Your Name]</p>
+                    </div>
+                </div>
+            </div>
+            <p class="instruction" data-aos="fade-up" data-aos-delay="300">Click the envelope to open it!</p>
+        </section>
+        
+        <section id="gallery" class="container">
+            <h2 data-aos="fade-up">A Polaroid Scrapbook</h2>
+            <div class="polaroid-gallery">
+                <div class="polaroid" data-aos="fade-in" data-aos-delay="100"><img src="images/photo1.jpg" alt="Memory 1"><figcaption>First Family Trip</figcaption></div>
+                <div class="polaroid" data-aos="fade-in" data-aos-delay="300"><img src="images/photo2.jpg" alt="Memory 2"><figcaption>Graduation Day</figcaption></div>
+                <div class="polaroid" data-aos="fade-in" data-aos-delay="200"><img src="images/photo3.jpg" alt="Memory 3"><figcaption>That silly hat!</figcaption></div>
+                <div class="polaroid" data-aos="fade-in" data-aos-delay="400"><img src="images/photo4.jpg" alt="Memory 4"><figcaption>Cooking disaster</figcaption></div>
+                <div class="polaroid" data-aos="fade-in" data-aos-delay="100"><img src="images/photo5.jpg" alt="Memory 5"><figcaption>Beach days</figcaption></div>
+                <div class="polaroid" data-aos="fade-in" data-aos-delay="300"><img src="images/photo6.jpg" alt="Memory 6"><figcaption>The 90s look</figcaption></div>
+            </div>
+        </section>
+
+        <section id="lessons" class="container">
+            <h2 data-aos="fade-up">Things You've Taught Me</h2>
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-content"><h3>Be Kind, Always</h3><p>The simplest, yet most powerful lesson. Your generosity inspires me every day.</p></div>
+                </div>
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-content"><h3>Hard Work Pays Off</h3><p>You showed me that dedication and persistence can move mountains.</p></div>
+                </div>
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-content"><h3>Never Stop Learning</h3><p>Your curiosity for the world is infectious. It taught me to always ask 'why?'.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="awards" class="container">
+             <h2 data-aos="fade-up">The Dad Awards 🏆</h2>
+             <div class="awards-grid">
+                <div class="award-card" data-aos="zoom-in" data-aos-delay="100"><h3>Best Hug Giver</h3><p>For hugs that can fix literally anything.</p></div>
+                <div class="award-card" data-aos="zoom-in" data-aos-delay="200"><h3>Master of Puns</h3><p>For jokes that are 50% cringe and 50% genius.</p></div>
+                <div class="award-card" data-aos="zoom-in" data-aos-delay="300"><h3>Grill Sergeant</h3><p>For perfectly cooked burgers, rain or shine.</p></div>
+             </div>
+        </section>
+
+        <section id="spotify" class="container">
+            <h2 data-aos="fade-up">Our Soundtrack</h2>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" data-aos="fade-up"></iframe>
+        </section>
+
+        <section id="quiz" class="container">
+            <h2 data-aos="fade-up">The Dad Quiz!</h2>
+            <div class="quiz-container" data-aos="fade-up" data-aos-delay="200">
+                <div id="quiz-content">
+                    <p id="question-text">What is Dad's go-to snack?</p>
+                    <div class="quiz-options">
+                        <button class="quiz-btn">Popcorn</button>
+                        <button class="quiz-btn">Ice Cream</button>
+                        <button class="quiz-btn">Peanuts</button>
+                        <button class="quiz-btn">Chips</button>
+                    </div>
+                </div>
+                <div id="quiz-results" style="display: none;">
+                    <h3>Quiz Complete!</h3>
+                    <p>You scored <span id="score"></span> out of <span id="total-questions"></span>!</p>
+                    <button id="retry-quiz-btn">Try Again</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="guess-memory" class="container">
+            <h2 data-aos="fade-up">Guess The Memory</h2>
+            <div class="memory-game" data-aos="fade-up" data-aos-delay="200">
+                <div class="memory-photo-wrapper">
+                    <img src="images/memory-blurry.jpg" alt="A blurry memory" id="memory-photo">
+                </div>
+                <div id="memory-clue">
+                    <p><strong>Clue:</strong> It was cold, and someone lost a glove!</p>
+                    <form id="memory-form">
+                        <input type="text" id="memory-guess" placeholder="Your guess...">
+                        <button type="submit">Reveal!</button>
+                    </form>
+                    <p id="memory-feedback"></p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <footer>
+        <h3>Celebrating <span class="dad-name">Dad</span> for...</h3>
+        <div id="age-counter">
+            <span id="years">00</span> years • 
+            <span id="days">000</span> days • 
+            <span id="hours">00</span> hrs • 
+            <span id="mins">00</span> mins • 
+            <span id="secs">00</span> secs
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+                                                                                
